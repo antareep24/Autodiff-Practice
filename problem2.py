@@ -22,4 +22,8 @@ print('d2f/dx2 at (1.0, 1.0): ', d2fdx2(1.0, 1.0))
 
 #d2fdy2 = ?
 #d2fdxy = ?
+d2fdy2 = jacrev(dfdy, argnums = 1)
+d2fdxy= jacrev(dfdx, argnums = 1)
 
+print('d2f/dy2 at (2.0,1.0): ',d2fdy2(2.0,1.0))
+print('d2f/dxdy at (1.0,2.0): ',d2fdxy(1.0, 2.0))
